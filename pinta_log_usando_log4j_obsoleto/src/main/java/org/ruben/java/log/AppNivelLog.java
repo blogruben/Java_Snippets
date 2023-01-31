@@ -2,13 +2,13 @@ package org.ruben.java.log;
 
 import org.apache.log4j.Logger;
 
-public class AppLogEnError{
+public class AppNivelLog{
 	
-	final static Logger logger = Logger.getLogger(AppLogEnError.class);
+	final static Logger logger = Logger.getLogger(AppNivelLog.class);
 	
 	public static void main(String[] args) {
 	
-		AppLogEnError app = new AppLogEnError();
+		AppNivelLog app = new AppNivelLog();
 		
 		if(logger.isDebugEnabled()){
 			logger.debug("Hola mundo (debug)");

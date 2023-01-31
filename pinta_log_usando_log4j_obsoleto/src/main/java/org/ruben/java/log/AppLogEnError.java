@@ -2,13 +2,13 @@ package org.ruben.java.log;
 
 import org.apache.log4j.Logger;
 
-public class AppNivelLog{
+public class AppLogEnError{
 	
-	final static Logger logger = Logger.getLogger(AppNivelLog.class);
+	final static Logger logger = Logger.getLogger(AppLogEnError.class);
 	
 	public static void main(String[] args) {
 	
-		AppNivelLog app = new AppNivelLog();
+		AppLogEnError app = new AppLogEnError();
 		try{
 			app.dividir();
 		}catch(ArithmeticException ex){
