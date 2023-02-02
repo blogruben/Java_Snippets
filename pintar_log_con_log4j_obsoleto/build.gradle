@@ -15,3 +15,7 @@ dependencies {
 application {
     mainClassName = 'org.ruben.java.log.AppNivelLog'
 }
+
+task wrapVersion(type: Wrapper) {
+   gradleVersion = '5.6'
+}
