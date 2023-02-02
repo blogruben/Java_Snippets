@@ -19,7 +19,6 @@ public class App {
         //en el root logger esta en debug
         logger.trace("No se muestra TRACE < INFO");
 
-
         //podemos filtra niveles por paquete
         //niveles TRACE, DEBUG, INFO, WARN y ERROR
         //en logback.xml ponemos este paquete a nivel de INFO
@@ -29,15 +28,11 @@ public class App {
         loggerTareaINFO.warn("4. Si vemos - WARN > INFO.");
         loggerTareaINFO.error("5. Si vemos - ERROR > INFO.");
         //en logback.xml ponemos este paquete a nivel de WARN
-        loggerSubtareaWARN.debug("4. DEBUG < INFO");
-        loggerSubtareaWARN.info("3. INFO == INFO");
-
         loggerSubtareaWARN.trace("1. No vemos - TRACE < WARN.");
         loggerSubtareaWARN.debug("2. No vemos - DEBUG < WARN.");
         loggerSubtareaWARN.info("3. No vemos - INFO < WARN.");
         loggerSubtareaWARN.warn("4. Si vemos - WARN = WARN.");
         loggerSubtareaWARN.error("5. Si vemos - ERROR > WARN.");
-
 
     }
 }

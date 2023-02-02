@@ -1,5 +1,6 @@
 # Ignore Gradle generados
 *gradlew.bat
+*/.gradle/*
 */gradle/*
 *gradlew
 
