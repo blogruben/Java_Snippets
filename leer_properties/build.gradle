@@ -16,6 +16,8 @@ application {
     mainClassName = 'org.ruben.java.leerProperties.App'
 }
 
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 task wrapVersion(type: Wrapper) {
    gradleVersion = '5.6'
 }

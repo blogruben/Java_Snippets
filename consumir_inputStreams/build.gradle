@@ -9,11 +9,12 @@ repositories {
 }
 
 dependencies {
-    implementation 'log4j:log4j:1.2.17'
+    testImplementation 'junit:junit:4.12'
+    implementation 'commons-io:commons-io:2.4'
 }
 
 application {
-    mainClassName = 'org.ruben.java.log.AppNivelLog'
+    mainClassName = 'org.ruben.java.inputStream.App'
 }
 
 sourceCompatibility = 1.8
