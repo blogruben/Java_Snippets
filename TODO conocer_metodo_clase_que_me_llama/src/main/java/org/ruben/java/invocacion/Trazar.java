@@ -6,14 +6,20 @@ public class Trazar  {
     void quienMeLLama(){
         //Es muy costoso, Current Thread StackTrace: 5886.964 ms.
         //StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
-        //StackTraceElement ste = stackTraceElements[2];       
-        //System.out.println(ste.getClassName()+" "+ste.getMethodName()+" "+ste.getLineNumber());
+        //StackTraceElement ste = stackTraceElements[2];  
+        ////System.out.println(ste.getClassName()+" "+ste.getMethodName()+" "+ste.getLineNumber());     
+        //ste.getClassName();
+        //ste.getMethodName();
+        //ste.getLineNumber();
 
         //algo menos costoso Throwable StackTrace: 4700.073 ms.
-        //new Throwable().getStackTrace()[2].getClassName();
+        //new Throwable().getStackTrace()[1].getClassName();
 
-        //mas eficiente SecurityManager: 1046.804 ms.
-        mySecurityManager.getCallerClassName(2);
+        //2152500 mas eficiente SecurityManager: 1046.804 ms.
+        //mySecurityManager.getCallerClassName(2);
+
+        //2400800
+        new Exception().getStackTrace()[1].getMethodName(); // output :doit
     }
 
       /** 
@@ -28,6 +34,9 @@ public class Trazar  {
     }
 
 
-
+    <T> void quienMeLLama(T t){
+        //System.out.println(t.getClass());
+        t.getClass();
+    }
 
 }

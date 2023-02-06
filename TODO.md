@@ -25,3 +25,5 @@ Iré haciendo diferentes practicas probablemente con las siguientes librerías:
 - mapStruts
 - mockito
 - RXJava
+
+# calcular duracion ejecucion
