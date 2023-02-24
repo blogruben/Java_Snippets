@@ -20,7 +20,7 @@ public class IOFichero {
 	 * Leemos un fichero y devolvemos un String con el contenido.
 	 * El encoding puede ser por ejemplo "ISO-8859-1" o "UTF-8"
      */
-    static String leerFichero( String rutaNombreFichero, String encoding ) {
+    public static String leerFichero( String rutaNombreFichero, String encoding ) {
 		File file = new File(rutaNombreFichero);
 		try(InputStream oIs = new FileInputStream(file))  {
 			byte[] abBuffer = new byte[oIs.available()];
@@ -31,7 +31,7 @@ public class IOFichero {
 		}
 	}
 
-	static void escribirFichero(String nombreFicheroConRuta, String contenido) {
+	public static void escribirFichero(String nombreFicheroConRuta, String contenido) {
 		try(FileWriter file = new FileWriter(nombreFicheroConRuta);BufferedWriter output = new BufferedWriter(file);) {
 		  	output.write(contenido);
 		} catch (IOException e) {
@@ -39,7 +39,7 @@ public class IOFichero {
 		}
 	}
 
-	static List<String> leeFicheroPorLineas(String nombrearchivo) {
+	public static List<String> leeFicheroPorLineas(String nombrearchivo) {
         List<String> result;
         try (Stream<String> lines = Files.lines(Paths.get(nombrearchivo))) {
             result = lines.collect(Collectors.toList());
@@ -51,7 +51,7 @@ public class IOFichero {
     }
 
 
-	static List<Fichero> listarFicherosDeUnDirectorio(String directorio){
+	public static List<Fichero> listarFicherosDeUnDirectorio(String directorio){
 		File carpeta = new File(directorio);
 		String[] listado = carpeta.list();
 		List<Fichero> ficheros = new ArrayList<>();
